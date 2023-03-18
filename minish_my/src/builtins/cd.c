@@ -52,7 +52,7 @@ void	cd_relative(char *relative, char *old_path)
 	free (path);
 }
 
-void	cd_no_arg(char *old_pwd)
+void	no_arg(char *old_pwd)
 {
 	t_env	*home;
 
@@ -83,7 +83,7 @@ void	cd_absolute(char *command, char *old_pwd_value)
 		save_old_pwd(old_pwd_value);
 }
 
-void	built_in_cd(t_element *elem)
+void	cd_built(t_element *elem)
 {
 	char	**command;
 	char	*old_pwd_value;
@@ -93,9 +93,9 @@ void	built_in_cd(t_element *elem)
 	getcwd(pwd, sizeof(pwd));
 	old_pwd_value = ft_strdup(pwd);
 	if ((command[1] != NULL) && (command[2] != NULL))
-		cd_many_arg_err();
+		many_arg();
 	else if (!(command[1]) || (command[1][0] == '~' && !(command[1][1])))
-		cd_no_arg(old_pwd_value);
+		no_arg(old_pwd_value);
 	else
 	{
 		if (command[1][0] == '/')

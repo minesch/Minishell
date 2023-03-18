@@ -36,7 +36,7 @@ int	do_unset(char *command)
 	return (0);
 }
 
-int	built_in_unset(t_element *elem)
+int	unset_built(t_element *elem)
 {
 	char	**command;
 	int		i;

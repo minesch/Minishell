@@ -62,7 +62,7 @@ int	do_export(char **command, t_env	*head)
 	return (set_status(0));
 }
 
-void	built_in_export(t_element *elem)
+void	export_built(t_element *elem)
 {
 	char	**command;
 	t_env	*head;

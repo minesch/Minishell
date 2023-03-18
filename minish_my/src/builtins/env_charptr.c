@@ -69,7 +69,7 @@ char	**get_arr_env(t_env *l_env)
 	return (env);
 }
 
-void	print_env(t_env *eenvv)
+void	env_built(t_env *eenvv)
 {
 	int		i;
 	char	**eenv;

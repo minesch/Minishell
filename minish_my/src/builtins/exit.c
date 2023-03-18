@@ -57,7 +57,7 @@ void	do_exit(char *command)
 	check_long_num(command, k, gago);
 }
 
-int	built_in_exit(t_element *elem)
+int	exit_built(t_element *elem)
 {
 	char	**command;
 

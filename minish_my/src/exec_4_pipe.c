@@ -48,7 +48,7 @@ void	do_pipe_execute_child_execution(t_element *ptr,
 	}
 	if (is_builtin(ptr->command->cmd) == 0)
 	{
-		run_builtin(&ptr);
+		built_exec(&ptr);
 		exit(get_status());
 	}
 	paths = get_abs_path(get_paths(), ptr->command->cmd);

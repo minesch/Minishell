@@ -1,6 +1,6 @@
 #include "main.h"
 
-void	built_in_pwd(void)
+void	pwd_built(void)
 {
 	char	pwd[PATH_MAX];
 	char	*pwd_ptr;

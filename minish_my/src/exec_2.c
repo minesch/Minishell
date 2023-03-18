@@ -58,7 +58,7 @@ void	_execute(t_element *ptr)
 	else if (ptr->command->out == -1)
 		print_error(ptr->command->cmd, "Is a directory");
 	else if (is_builtin(ptr->command->cmd) == 0)
-		run_builtin(&ptr);
+		built_exec(&ptr);
 	else
 		execute_cmd(ptr);
 }

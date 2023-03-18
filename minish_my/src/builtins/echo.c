@@ -23,7 +23,7 @@ int	flag_checking(char *command)
 	return (0);
 }
 
-int	built_in_echo(t_element *elem)
+int	echo_built(t_element *elem)
 {
 	char	**command;
 	int		flag;
