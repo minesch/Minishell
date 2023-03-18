@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.h                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ergrigor < ergrigor@student.42yerevan.am > +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 16:33:14 by ergrigor          #+#    #+#             */
-/*   Updated: 2023/02/06 18:53:23 by ergrigor         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef MAIN_H
 # define MAIN_H
 
@@ -32,6 +20,8 @@
 # include <stdio.h>
 # include <readline/readline.h>
 # include <readline/history.h>
+
+# define PATH_MAX 4096
 
 typedef struct s_command
 {

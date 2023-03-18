@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   exit.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ergrigor < ergrigor@student.42yerevan.am > +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/06 18:48:51 by ergrigor          #+#    #+#             */
-/*   Updated: 2023/02/06 20:10:09 by ergrigor         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "main.h"
 
 int	check_char(char *str)
@@ -28,9 +16,6 @@ int	check_char(char *str)
 
 int	check_long_num(char *str, int j, int status)
 {
-	int				i;
-
-	i = -1;
 	if (check_char(str) == 1)
 	{
 		ft_putstr_fd(get_val_value("PS1: "), 2);
