@@ -22,7 +22,7 @@ topdir = ..
 srcdir = .
 
 
-prefix = /home/minesh/Desktop/minishell/minish_my/readline/readline_out
+prefix = /Users/azakarya/Desktop/minishell/readline/readline_out
 
 datarootdir = ${prefix}/share
 
@@ -49,7 +49,7 @@ RM = rm -f
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 
-BUILD_DIR = /home/minesh/Desktop/minishell/minish_my/readline
+BUILD_DIR = /Users/azakarya/Desktop/minishell/readline
 TEXINPUTDIR = $(srcdir)
 
 MAKEINFO    = LANGUAGE= makeinfo

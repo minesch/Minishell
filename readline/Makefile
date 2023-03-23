@@ -31,7 +31,7 @@ PACKAGE_TARNAME = readline
 srcdir = .
 
 top_srcdir = .
-BUILD_DIR = /home/minesh/Desktop/minishell/minish_my/readline
+BUILD_DIR = /Users/azakarya/Desktop/minishell/readline
 
 INSTALL = /usr/bin/install -c
 INSTALL_PROGRAM = ${INSTALL}
@@ -48,7 +48,7 @@ MV = mv
 
 SHELL = /bin/sh
 
-prefix = /home/minesh/Desktop/minishell/minish_my/readline/readline_out
+prefix = /Users/azakarya/Desktop/minishell/readline/readline_out
 exec_prefix = ${prefix}
 
 datarootdir = ${prefix}/share

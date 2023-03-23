@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   env_charptr.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/22 20:48:15 by azakarya          #+#    #+#             */
+/*   Updated: 2023/03/22 20:48:16 by azakarya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "main.h"
 
 int	get_env_var_count(t_env *l_env)
@@ -35,7 +47,7 @@ char	*get_line_env(t_env *l_env)
 	return (line);
 }
 
-// get the char ** from linked list 
+// get the char ** from linked list
 char	**get_arr_env(t_env *l_env)
 {
 	char	**env;

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   echo.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/22 20:48:12 by azakarya          #+#    #+#             */
+/*   Updated: 2023/03/22 20:50:18 by azakarya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "main.h"
 
 void	ft_putstr_fd(char *s, int fd)
@@ -32,7 +44,8 @@ int	echo_built(t_element *elem)
 	i = 1;
 	command = elem->command->args;
 	flag = 0;
-	while ((command[i]) && (command[i][0] == '-') && flag_checking(command[i]) == 1)
+	while ((command[i]) && (command[i][0] == '-')
+		&& flag_checking(command[i]) == 1)
 	{
 			flag = 1;
 			i++;

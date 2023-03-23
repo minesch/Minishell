@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.h                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/22 20:36:43 by azakarya          #+#    #+#             */
+/*   Updated: 2023/03/23 22:31:31 by azakarya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef MAIN_H
 # define MAIN_H
 
@@ -20,7 +32,7 @@
 # include <readline/readline.h>
 # include <readline/history.h>
 
-# define PATH_MAX 4096
+// # define PATH_MAX 4096
 
 typedef struct s_command
 {
@@ -62,12 +74,12 @@ typedef struct s_env
 
 typedef struct s_global
 {
-	t_env		*env;	
+	t_env		*env;
 	t_token		*tokens;
 	t_element	*elem;
 	char		**real_env;
 	int			fd_index;
-	int			all_fd[FOPEN_MAX];
+	int			all_fd[OPEN_MAX];
 	int			hd_count;
 	int			signal;
 	int			hd_sig;
@@ -192,9 +204,10 @@ char			*append_to_result(char *result, char *line, int start, int end);
 char			*resolve_var_line(char *line, int *i);
 
 //built
+void			built_exec(t_element **ptr);
+
 int				unset_built(t_element *elem);
 int				exit_built(t_element *elem);
-void			built_exec(t_element **ptr);
 void			env_built(t_env *eenvv);
 int				echo_built(t_element *elem);
 void			cd_built(t_element *elem);

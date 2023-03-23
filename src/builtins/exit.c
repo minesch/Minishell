@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   exit.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/22 20:48:28 by azakarya          #+#    #+#             */
+/*   Updated: 2023/03/22 20:48:29 by azakarya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "main.h"
 
 int	check_char(char *str)
@@ -22,7 +34,7 @@ int	check_long_num(char *str, int j, int status)
 		ft_putstr_fd(str, 2);
 		ft_putstr_fd(": exit: numeric argument required\n", 2);
 		exit(255);
-	}	
+	}
 	if (ft_strlen(str) >= 19
 		&& ((ft_strcmp(str, "9223372036854775807") <= 0) || \
 	(j == 1 && ft_strcmp(str, "9223372036854775808") <= 0)))

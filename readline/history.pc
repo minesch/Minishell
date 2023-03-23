@@ -1,4 +1,4 @@
-prefix=/home/minesh/Desktop/minishell/minish_my/readline/readline_out
+prefix=/Users/azakarya/Desktop/minishell/readline/readline_out
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include

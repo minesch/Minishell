@@ -1,4 +1,16 @@
-#include "main.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   export.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/03/23 22:21:59 by azakarya          #+#    #+#             */
+/*   Updated: 2023/03/23 22:50:53 by azakarya         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../Includes/main.h"
 
 void	export_without_equal(char *name, t_env *new_node)
 {
@@ -42,10 +54,9 @@ int	do_export(char **command, t_env	*head)
 	t_env	*tmp;
 
 	i = 0;
-	tmp = NULL;
+	tmp = head;
 	if (!command[1])
 	{
-		tmp = head;
 		tmp = sort_env(&tmp);
 		print_exported_env(tmp);
 	}
@@ -57,8 +68,7 @@ int	do_export(char **command, t_env	*head)
 				return (set_status(1));
 		}
 	}
-	if (tmp)
-		free_exported_env(&tmp);
+	free_exported_env(&tmp);
 	return (set_status(0));
 }
 
@@ -67,14 +77,16 @@ void	export_built(t_element *elem)
 	char	**command;
 	t_env	*head;
 	t_env	*tmp;
+	t_env	*new;
 
 	tmp = g_lobal->env;
 	head = ft_lstnew_env(tmp->val_name, tmp->val_value, tmp->hidden);
 	tmp = tmp->next;
 	while (tmp)
 	{
-		ft_lstadd_back_env(&head, ft_lstnew_env(tmp->val_name,
-				tmp->val_value, tmp->hidden));
+		new = ft_lstnew_env(tmp->val_name, tmp->val_value, tmp->hidden);
+		ft_lstadd_back_env(&head, new);
+		new = 0x0;
 		tmp = tmp->next;
 	}
 	command = elem->command->args;

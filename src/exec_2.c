@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ergrigor < ergrigor@student.42yerevan.am > +#+  +:+       +#+        */
+/*   By: azakarya <azakarya@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 20:41:04 by ergrigor          #+#    #+#             */
-/*   Updated: 2023/02/03 10:34:16 by ergrigor         ###   ########.fr       */
+/*   Updated: 2023/03/23 22:33:30 by azakarya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	execute_cmd(t_element *ptr)
 	}
 	pid = fork();
 	if (pid == 0)
-	{	
+	{
 		signal(SIGINT, handler);
 		if (execve(get_abs_path(get_paths(), ptr->command->cmd),
 				ptr->command->args, get_arr_env(g_lobal->env)) == -1)

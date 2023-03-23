@@ -21,7 +21,7 @@ RL_LIBRARY_VERSION = 8.2
 SHELL = /bin/sh
 RM = rm -f
 
-prefix = /home/minesh/Desktop/minishell/minish_my/readline/readline_out
+prefix = /Users/azakarya/Desktop/minishell/readline/readline_out
 exec_prefix = ${prefix}
 
 datarootdir = ${prefix}/share
@@ -32,7 +32,7 @@ datadir = ${datarootdir}
 
 top_srcdir = ..
 #BUILD_DIR = .
-BUILD_DIR = /home/minesh/Desktop/minishell/minish_my/readline
+BUILD_DIR = /Users/azakarya/Desktop/minishell/readline
 installdir = $(datadir)/readline
 
 INSTALL = /usr/bin/install -c
